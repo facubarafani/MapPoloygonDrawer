@@ -33,4 +33,7 @@ DerivedData
 Pods
 
 # Keys file
-MapPolygonDrawer/Keys.swift
+MapPolygonDrawer/Resources/Keys.swift
+
+#RSwift
+*.generated.swift

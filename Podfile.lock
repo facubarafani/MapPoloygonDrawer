@@ -656,11 +656,21 @@ PODS:
   - MotionAnimator (4.0.1):
     - MotionInterchange (~> 3.0)
   - MotionInterchange (3.0.0)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - Realm (10.20.1):
+    - Realm/Headers (= 10.20.1)
+  - Realm/Headers (10.20.1)
+  - RealmSwift (10.20.1):
+    - Realm (= 10.20.1)
 
 DEPENDENCIES:
   - GoogleMaps (= 6.0.1)
   - Material
   - MaterialComponents
+  - R.swift
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -672,6 +682,10 @@ SPEC REPOS:
     - Motion
     - MotionAnimator
     - MotionInterchange
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
@@ -682,7 +696,11 @@ SPEC CHECKSUMS:
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Realm: fac5ecd031fcb81171627b74944c885662d4b266
+  RealmSwift: 9b02d25acb46a14756bde9893abb99e2e3675923
 
-PODFILE CHECKSUM: f661e6f84a0a0697dfedbad33e2f3190d763f18e
+PODFILE CHECKSUM: d5e5f89ec561a972af6409c4f19567a9d68941db
 
 COCOAPODS: 1.10.1

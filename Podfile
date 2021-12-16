@@ -9,4 +9,6 @@ target 'MapPolygonDrawer' do
   pod 'GoogleMaps', '6.0.1'
   pod 'Material'
   pod 'MaterialComponents'
+  pod 'R.swift'
+  pod 'RealmSwift'
 end
