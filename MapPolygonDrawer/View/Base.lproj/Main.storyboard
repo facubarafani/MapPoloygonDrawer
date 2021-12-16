@@ -22,6 +22,9 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-Wu-lvH" customClass="MDCFloatingButton">
                                 <rect key="frame" x="352" y="800" width="30" height="30"/>
+                                <connections>
+                                    <action selector="addFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Zz-nu-3me"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
