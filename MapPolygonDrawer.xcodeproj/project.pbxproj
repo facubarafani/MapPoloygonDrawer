@@ -10,6 +10,7 @@
 		DF7384E4E63324F3B5A92A18 /* Pods_MapPolygonDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */; };
 		E2844F60276AF14F008ADDD4 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844F5F276AF14F008ADDD4 /* Keys.swift */; };
 		E2844F67276AF354008ADDD4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844F66276AF354008ADDD4 /* R.generated.swift */; };
+		E2844F69276AF545008ADDD4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2844F68276AF545008ADDD4 /* Defaults.swift */; };
 		E29E41BA276AA48D008F585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41B9276AA48D008F585A /* AppDelegate.swift */; };
 		E29E41BC276AA48D008F585A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41BB276AA48D008F585A /* SceneDelegate.swift */; };
 		E29E41BE276AA48D008F585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41BD276AA48D008F585A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapPolygonDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2844F5F276AF14F008ADDD4 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E2844F66276AF354008ADDD4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		E2844F68276AF545008ADDD4 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		E29E41B6276AA48D008F585A /* MapPolygonDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapPolygonDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29E41B9276AA48D008F585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29E41BB276AA48D008F585A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				E2844F5F276AF14F008ADDD4 /* Keys.swift */,
 				E2844F66276AF354008ADDD4 /* R.generated.swift */,
 				E29E41C2276AA48E008F585A /* Assets.xcassets */,
+				E2844F68276AF545008ADDD4 /* Defaults.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				E29E41BE276AA48D008F585A /* ViewController.swift in Sources */,
 				E2844F60276AF14F008ADDD4 /* Keys.swift in Sources */,
 				E2844F67276AF354008ADDD4 /* R.generated.swift in Sources */,
+				E2844F69276AF545008ADDD4 /* Defaults.swift in Sources */,
 				E29E41BA276AA48D008F585A /* AppDelegate.swift in Sources */,
 				E29E41BC276AA48D008F585A /* SceneDelegate.swift in Sources */,
 			);

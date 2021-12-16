@@ -20,16 +20,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-Wu-lvH" customClass="MDCFloatingButton">
+                                <rect key="frame" x="352" y="800" width="30" height="30"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3L0-Wu-lvH" secondAttribute="bottom" constant="32" id="0AZ-8b-MrZ"/>
                             <constraint firstItem="hG4-tQ-Fzs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="53W-0a-Qxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3L0-Wu-lvH" secondAttribute="trailing" constant="32" id="5DF-3o-MHH"/>
                             <constraint firstAttribute="trailing" secondItem="hG4-tQ-Fzs" secondAttribute="trailing" id="BZL-Ct-AoI"/>
                             <constraint firstItem="hG4-tQ-Fzs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jg6-oo-YmS"/>
                             <constraint firstAttribute="bottom" secondItem="hG4-tQ-Fzs" secondAttribute="bottom" id="peZ-Pw-HWQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addFloatingButton" destination="3L0-Wu-lvH" id="JFF-n9-wdD"/>
+                        <outlet property="mapView" destination="hG4-tQ-Fzs" id="3hs-2w-gsl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

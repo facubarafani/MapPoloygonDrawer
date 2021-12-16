@@ -11,4 +11,7 @@ target 'MapPolygonDrawer' do
   pod 'MaterialComponents'
   pod 'R.swift'
   pod 'RealmSwift'
+  pod 'SwiftyUserDefaults'
+  pod 'PromiseKit'
+  pod 'PromiseKit/CoreLocation'
 end
