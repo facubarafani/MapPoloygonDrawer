@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF7384E4E63324F3B5A92A18 /* Pods_MapPolygonDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */; };
+		E29E41BA276AA48D008F585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41B9276AA48D008F585A /* AppDelegate.swift */; };
+		E29E41BC276AA48D008F585A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41BB276AA48D008F585A /* SceneDelegate.swift */; };
+		E29E41BE276AA48D008F585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41BD276AA48D008F585A /* ViewController.swift */; };
+		E29E41C1276AA48D008F585A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29E41BF276AA48D008F585A /* Main.storyboard */; };
+		E29E41C3276AA48E008F585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29E41C2276AA48E008F585A /* Assets.xcassets */; };
+		E29E41C6276AA48E008F585A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29E41C4276AA48E008F585A /* LaunchScreen.storyboard */; };
+		E29E41CE276AA6D6008F585A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29E41CD276AA6D6008F585A /* Keys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FA7E281E0BD0DE5AD6B88A0 /* Pods-MapPolygonDrawer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPolygonDrawer.debug.xcconfig"; path = "Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer.debug.xcconfig"; sourceTree = "<group>"; };
+		32B81ADB75108FDA839B184A /* Pods-MapPolygonDrawer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPolygonDrawer.release.xcconfig"; path = "Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer.release.xcconfig"; sourceTree = "<group>"; };
+		69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapPolygonDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29E41B6276AA48D008F585A /* MapPolygonDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapPolygonDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29E41B9276AA48D008F585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E29E41BB276AA48D008F585A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E29E41BD276AA48D008F585A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E29E41C0276AA48D008F585A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E29E41C2276AA48E008F585A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E29E41C5276AA48E008F585A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E29E41C7276AA48E008F585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E29E41CD276AA6D6008F585A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E29E41B3276AA48D008F585A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7384E4E63324F3B5A92A18 /* Pods_MapPolygonDrawer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDA4AC78D080A383255BF968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E006BCAAA34184AC86893916 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FA7E281E0BD0DE5AD6B88A0 /* Pods-MapPolygonDrawer.debug.xcconfig */,
+				32B81ADB75108FDA839B184A /* Pods-MapPolygonDrawer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E29E41AD276AA48D008F585A = {
+			isa = PBXGroup;
+			children = (
+				E29E41B8276AA48D008F585A /* MapPolygonDrawer */,
+				E29E41B7276AA48D008F585A /* Products */,
+				E006BCAAA34184AC86893916 /* Pods */,
+				BDA4AC78D080A383255BF968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E29E41B7276AA48D008F585A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E29E41B6276AA48D008F585A /* MapPolygonDrawer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E29E41B8276AA48D008F585A /* MapPolygonDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				E29E41B9276AA48D008F585A /* AppDelegate.swift */,
+				E29E41BB276AA48D008F585A /* SceneDelegate.swift */,
+				E29E41BD276AA48D008F585A /* ViewController.swift */,
+				E29E41BF276AA48D008F585A /* Main.storyboard */,
+				E29E41C2276AA48E008F585A /* Assets.xcassets */,
+				E29E41C4276AA48E008F585A /* LaunchScreen.storyboard */,
+				E29E41C7276AA48E008F585A /* Info.plist */,
+				E29E41CD276AA6D6008F585A /* Keys.swift */,
+			);
+			path = MapPolygonDrawer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E29E41B5276AA48D008F585A /* MapPolygonDrawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E29E41CA276AA48E008F585A /* Build configuration list for PBXNativeTarget "MapPolygonDrawer" */;
+			buildPhases = (
+				906BEC1F1C35383349FDA156 /* [CP] Check Pods Manifest.lock */,
+				E29E41B2276AA48D008F585A /* Sources */,
+				E29E41B3276AA48D008F585A /* Frameworks */,
+				E29E41B4276AA48D008F585A /* Resources */,
+				AFC030CB7D95AA16E675FEF9 /* [CP] Copy Pods Resources */,
+				8A80A7EB33CED8B30771B2CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapPolygonDrawer;
+			productName = MapPolygonDrawer;
+			productReference = E29E41B6276AA48D008F585A /* MapPolygonDrawer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E29E41AE276AA48D008F585A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E29E41B5276AA48D008F585A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = E29E41B1276AA48D008F585A /* Build configuration list for PBXProject "MapPolygonDrawer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E29E41AD276AA48D008F585A;
+			productRefGroup = E29E41B7276AA48D008F585A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E29E41B5276AA48D008F585A /* MapPolygonDrawer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E29E41B4276AA48D008F585A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29E41C6276AA48E008F585A /* LaunchScreen.storyboard in Resources */,
+				E29E41C3276AA48E008F585A /* Assets.xcassets in Resources */,
+				E29E41C1276AA48D008F585A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A80A7EB33CED8B30771B2CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906BEC1F1C35383349FDA156 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapPolygonDrawer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC030CB7D95AA16E675FEF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E29E41B2276AA48D008F585A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29E41BE276AA48D008F585A /* ViewController.swift in Sources */,
+				E29E41CE276AA6D6008F585A /* Keys.swift in Sources */,
+				E29E41BA276AA48D008F585A /* AppDelegate.swift in Sources */,
+				E29E41BC276AA48D008F585A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E29E41BF276AA48D008F585A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E29E41C0276AA48D008F585A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E29E41C4276AA48E008F585A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E29E41C5276AA48E008F585A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E29E41C8276AA48E008F585A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E29E41C9276AA48E008F585A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E29E41CB276AA48E008F585A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA7E281E0BD0DE5AD6B88A0 /* Pods-MapPolygonDrawer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P2HRB64HR;
+				INFOPLIST_FILE = MapPolygonDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.facundobarafani.MapPolygonDrawer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E29E41CC276AA48E008F585A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B81ADB75108FDA839B184A /* Pods-MapPolygonDrawer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P2HRB64HR;
+				INFOPLIST_FILE = MapPolygonDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.facundobarafani.MapPolygonDrawer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E29E41B1276AA48D008F585A /* Build configuration list for PBXProject "MapPolygonDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29E41C8276AA48E008F585A /* Debug */,
+				E29E41C9276AA48E008F585A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29E41CA276AA48E008F585A /* Build configuration list for PBXNativeTarget "MapPolygonDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29E41CB276AA48E008F585A /* Debug */,
+				E29E41CC276AA48E008F585A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E29E41AE276AA48D008F585A /* Project object */;
+}
