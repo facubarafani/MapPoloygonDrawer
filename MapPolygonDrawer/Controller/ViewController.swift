@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var addFloatingButton: MDCFloatingButton!
     @IBOutlet weak var mapView: GMSMapView!
     var isCreatingPolygon: Bool = false
-    var currentPoints = [Point]()
     var currentPolygon = Polygon()
     
     var userLocationCoordinate: CLLocationCoordinate2D?
@@ -55,6 +54,12 @@ class ViewController: UIViewController {
                                                   zoom: 16)
             self.mapView.animate(to: camera)
             self.mapView.delegate = self
+            
+            PolygonRepository.shared.fetchAll()
+                .done { polygons in
+                    let gMapsPolygons = polygons.map { $0.getGMSPolygon() }
+                    gMapsPolygons.forEach { $0.map = self.mapView }
+                }
         }.catch { error in
             debugPrint("UbicacionVC-initMap-requestLocation-error \(error)")
         }
@@ -73,9 +78,24 @@ class ViewController: UIViewController {
         } else {
             // sets add icon when isCreatingPolygon is turning into false
             addFloatingButton.setImage(R.image.images.add(), for: .normal)
+            savePolygonAndEmptyCurrentPolygon()
         }
         // Changes variable value to inverse
         isCreatingPolygon = !isCreatingPolygon
+    }
+    
+    private func savePolygonAndEmptyCurrentPolygon() {
+        if !currentPolygon.points.isEmpty {
+            do {
+                try PolygonRepository.shared.store(polygon: currentPolygon)
+            } catch {
+                debugPrint("Error occured attempting to store polygon")
+            }
+        }
+    }
+    
+    private func clearMap() {
+        
     }
     
 }
