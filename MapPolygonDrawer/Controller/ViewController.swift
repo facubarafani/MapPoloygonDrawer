@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     var isCreatingPolygon: Bool = false
     var currentPolygon = Polygon()
+    var mapPolygons = [GMSPolygon]() {
+        didSet {
+            mapPolygons.forEach { $0.map = self.mapView }
+        }
+    }
     
     var userLocationCoordinate: CLLocationCoordinate2D?
     override func viewDidLoad() {
@@ -58,7 +63,7 @@ class ViewController: UIViewController {
             PolygonRepository.shared.fetchAll()
                 .done { polygons in
                     let gMapsPolygons = polygons.map { $0.getGMSPolygon() }
-                    gMapsPolygons.forEach { $0.map = self.mapView }
+                    self.mapPolygons = gMapsPolygons
                 }
         }.catch { error in
             debugPrint("UbicacionVC-initMap-requestLocation-error \(error)")
@@ -95,7 +100,8 @@ class ViewController: UIViewController {
     }
     
     private func clearMap() {
-        
+        mapView.clear()
+        mapPolygons.forEach { $0.map = self.mapView }
     }
     
 }
@@ -111,7 +117,7 @@ extension ViewController: GMSMapViewDelegate {
         let marker = point.toMarker()
         marker.map = mapView
         currentPolygon.points.append(point)
-        mapView.clear()
+        clearMap()
         for p in currentPolygon.points {
             p.toMarker().map = mapView
         }
