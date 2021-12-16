@@ -65,5 +65,11 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: GMSMapViewDelegate {}
+extension ViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker()
+        marker.position = coordinate
+        marker.map = mapView
+    }
+}
 
