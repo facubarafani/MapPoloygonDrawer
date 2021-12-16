@@ -9,6 +9,7 @@ import UIKit
 import GoogleMaps
 import MaterialComponents
 import SwiftyUserDefaults
+import PromiseKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var addFloatingButton: MDCFloatingButton!
@@ -17,8 +18,14 @@ class ViewController: UIViewController {
     var userLocationCoordinate: CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMapView()
         setText()
         setUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        initMap()
     }
     
     @objc func setText() {}
@@ -32,10 +39,31 @@ class ViewController: UIViewController {
     private func setMapView() {
         mapView.settings.myLocationButton = false
         mapView.isHidden = true
-//         mapView.camera = GMSCameraPosition.userLastLocationCamera
         mapView.isHidden = false
     }
-
-
+    
+    private func initMap() {
+        firstly {
+            CLLocationManager.requestLocation(authorizationType: .whenInUse).lastValue
+        }.done { location in
+            self.userLocationCoordinate = location.coordinate
+            let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                                  longitude: location.coordinate.longitude,
+                                                  zoom: 16)
+            self.mapView.animate(to: camera)
+            self.mapView.delegate = self
+        }.catch { error in
+            debugPrint("UbicacionVC-initMap-requestLocation-error \(error)")
+        }
+    }
+    
+    private func deinitMap() {
+        mapView.clear()
+        mapView.delegate = nil
+    }
+    
+    
 }
+
+extension ViewController: GMSMapViewDelegate {}
 
