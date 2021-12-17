@@ -25,14 +25,17 @@ class PolygonRepository {
         }
     }
     
-    func store(polygon: Polygon) throws {
-        let realm = try! Realm()
-        do {
-            try realm.write {
-                realm.add(polygon)
+    func store(polygon: Polygon) -> Promise<Void>{
+        return Promise { seal in
+            let realm = try! Realm()
+            do {
+                try realm.write {
+                    realm.add(polygon)
+                }
+                seal.fulfill_()
+            } catch {
+                seal.reject(NSError(domain: "Error creating polygons", code: 400))
             }
-        } catch {
-            throw NSError(domain: "Error creating polygons", code: 400)
         }
     }
 }

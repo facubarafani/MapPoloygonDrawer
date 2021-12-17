@@ -30,6 +30,7 @@ import GoogleMaps
         let markerView = UIImageView(image: R.image.images.dot())
         markerView.tintColor = R.color.colors.primaryDark()
         marker.iconView = markerView
+        marker.groundAnchor = CGPoint(x: 0.5, y: 0.5);
         return marker
     }
 }

@@ -60,11 +60,7 @@ class ViewController: UIViewController {
             self.mapView.animate(to: camera)
             self.mapView.delegate = self
             
-            PolygonRepository.shared.fetchAll()
-                .done { polygons in
-                    let gMapsPolygons = polygons.map { $0.getGMSPolygon() }
-                    self.mapPolygons = gMapsPolygons
-                }
+            self.fetchLocallyStoredPolygons()
         }.catch { error in
             debugPrint("UbicacionVC-initMap-requestLocation-error \(error)")
         }
@@ -91,17 +87,29 @@ class ViewController: UIViewController {
     
     private func savePolygonAndEmptyCurrentPolygon() {
         if !currentPolygon.points.isEmpty {
-            do {
-                try PolygonRepository.shared.store(polygon: currentPolygon)
-            } catch {
-                debugPrint("Error occured attempting to store polygon")
-            }
+            PolygonRepository.shared.store(polygon: currentPolygon)
+                .done {
+                    self.currentPolygon = Polygon()
+                    self.fetchLocallyStoredPolygons()
+                    self.clearMap()
+                }
+                .catch { error in
+                    debugPrint(error)
+                }
         }
     }
     
     private func clearMap() {
         mapView.clear()
         mapPolygons.forEach { $0.map = self.mapView }
+    }
+    
+    private func fetchLocallyStoredPolygons() {
+        PolygonRepository.shared.fetchAll()
+            .done { polygons in
+                let gMapsPolygons = polygons.map { $0.getGMSPolygon() }
+                self.mapPolygons = gMapsPolygons
+            }
     }
     
 }
