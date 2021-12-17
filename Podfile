@@ -14,4 +14,5 @@ target 'MapPolygonDrawer' do
   pod 'SwiftyUserDefaults'
   pod 'PromiseKit'
   pod 'PromiseKit/CoreLocation'
+  pod 'Toast-Swift', '~> 5.0.0'
 end

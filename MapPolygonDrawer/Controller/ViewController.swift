@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             
             self.fetchLocallyStoredPolygons()
         }.catch { error in
-            debugPrint("UbicacionVC-initMap-requestLocation-error \(error)")
+            self.view.makeToast("Error while attempting to init map.")
         }
     }
     
@@ -92,9 +92,10 @@ class ViewController: UIViewController {
                     self.currentPolygon = Polygon()
                     self.fetchLocallyStoredPolygons()
                     self.clearMap()
+                    self.view.makeToast("Polygon saved successfully.")
                 }
                 .catch { error in
-                    debugPrint(error)
+                    self.view.makeToast("Error occurred when attempting to save polygon/")
                 }
         }
     }
@@ -109,6 +110,9 @@ class ViewController: UIViewController {
             .done { polygons in
                 let gMapsPolygons = polygons.map { $0.getGMSPolygon() }
                 self.mapPolygons = gMapsPolygons
+            }
+            .catch { _ in
+                self.view.makeToast("Error attempting to fetch locally stored polygons.")
             }
     }
     

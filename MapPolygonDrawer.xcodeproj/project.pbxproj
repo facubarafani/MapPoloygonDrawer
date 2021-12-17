@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A766F5C2276D0F2000268C99 /* Toast+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766F5C1276D0F2000268C99 /* Toast+Extensions.swift */; };
 		A7940382276CE40A00DBA33C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7940381276CE40A00DBA33C /* Keys.swift */; };
 		DF7384E4E63324F3B5A92A18 /* Pods_MapPolygonDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */; };
 		E227163C276BCD7B007F39B6 /* PolygonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E227163B276BCD7B007F39B6 /* PolygonRepository.swift */; };
@@ -26,6 +27,7 @@
 		0FA7E281E0BD0DE5AD6B88A0 /* Pods-MapPolygonDrawer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPolygonDrawer.debug.xcconfig"; path = "Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer.debug.xcconfig"; sourceTree = "<group>"; };
 		32B81ADB75108FDA839B184A /* Pods-MapPolygonDrawer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPolygonDrawer.release.xcconfig"; path = "Target Support Files/Pods-MapPolygonDrawer/Pods-MapPolygonDrawer.release.xcconfig"; sourceTree = "<group>"; };
 		69FC2E91B1DA5D9456A4739E /* Pods_MapPolygonDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapPolygonDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A766F5C1276D0F2000268C99 /* Toast+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toast+Extensions.swift"; sourceTree = "<group>"; };
 		A7940381276CE40A00DBA33C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E227163B276BCD7B007F39B6 /* PolygonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonRepository.swift; sourceTree = "<group>"; };
 		E2844F66276AF354008ADDD4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A766F5C0276D0F0F00268C99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A766F5C1276D0F2000268C99 /* Toast+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BDA4AC78D080A383255BF968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				E2844F63276AF30A008ADDD4 /* View */,
 				E2844F65276AF316008ADDD4 /* Controller */,
 				E2844F62276AF2FF008ADDD4 /* Resources */,
+				A766F5C0276D0F0F00268C99 /* Extensions */,
 				E29E41B9276AA48D008F585A /* AppDelegate.swift */,
 				E29E41BB276AA48D008F585A /* SceneDelegate.swift */,
 				E29E41C7276AA48E008F585A /* Info.plist */,
@@ -305,6 +316,7 @@
 				E2844F6D276AFA01008ADDD4 /* Point.swift in Sources */,
 				E29E41BE276AA48D008F585A /* ViewController.swift in Sources */,
 				E2844F67276AF354008ADDD4 /* R.generated.swift in Sources */,
+				A766F5C2276D0F2000268C99 /* Toast+Extensions.swift in Sources */,
 				E2844F69276AF545008ADDD4 /* Defaults.swift in Sources */,
 				E29E41BA276AA48D008F585A /* AppDelegate.swift in Sources */,
 				E29E41BC276AA48D008F585A /* SceneDelegate.swift in Sources */,
