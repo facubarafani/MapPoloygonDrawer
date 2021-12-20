@@ -57,9 +57,9 @@ class ViewController: UIViewController {
         addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
         
         // Cancel Floating Button
-        cancelFloatingButton.setImage(R.image.images.close(), for: .normal)
+        cancelFloatingButton.setImage(R.image.images.done(), for: .normal)
         cancelFloatingButton.setImageTintColor(.white, for: .normal)
-        cancelFloatingButton.setBackgroundColor(R.color.colors.secondary(), for: .normal)
+        cancelFloatingButton.setBackgroundColor(R.color.colors.green(), for: .normal)
         
         // Undo Floating Button
         undoFloatingButton.setImage(R.image.images.undo(), for: .normal)
@@ -99,9 +99,11 @@ class ViewController: UIViewController {
         // if last state before pressing button is user not creating polygon -> now it turns into true
         if !isCreatingPolygon {
             // sets cross icon when isCreatingPolygon is turning into true
+            addFloatingButton.setBackgroundColor(R.color.colors.secondary(), for: .normal)
             addFloatingButton.setImage(R.image.images.close(), for: .normal)
         } else {
             // sets add icon when isCreatingPolygon is turning into false
+            addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
             addFloatingButton.setImage(R.image.images.add(), for: .normal)
             savePolygonAndEmptyCurrentPolygon()
         }
