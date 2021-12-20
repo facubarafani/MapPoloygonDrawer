@@ -16,8 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var undoFloatingButton: MDCFloatingButton!
     @IBOutlet weak var cancelFloatingButton: MDCFloatingButton!
+    @IBOutlet weak var optionsStackView: UIStackView!
     
-    var isCreatingPolygon: Bool = false
+    var isCreatingPolygon: Bool = false {
+        didSet {
+            displayOptions()
+        }
+    }
     var currentPolygon = Polygon()
     var mapPolygons = [GMSPolygon]() {
         didSet {
@@ -41,6 +46,9 @@ class ViewController: UIViewController {
     @objc func setText() {}
     
     @objc func setUI() {
+        // Options StackView initial state
+        optionsStackView.subviews.forEach { $0.isHidden = true }
+        
         // Add Floating Button
         addFloatingButton.setImage(R.image.images.add(), for: .normal)
         addFloatingButton.setImageTintColor(.white, for: .normal)
@@ -130,6 +138,15 @@ class ViewController: UIViewController {
             }
     }
     
+    private func displayOptions() {
+        UIView.animate(
+            withDuration: 0.2, delay: 0, options: .curveEaseIn,
+            animations: {
+                self.optionsStackView.subviews.forEach {
+                    $0.isHidden = !$0.isHidden
+                }
+            })
+    }
 }
 
 extension ViewController: GMSMapViewDelegate {

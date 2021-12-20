@@ -100,6 +100,7 @@
                         <outlet property="addFloatingButton" destination="3L0-Wu-lvH" id="JFF-n9-wdD"/>
                         <outlet property="cancelFloatingButton" destination="391-TP-2cj" id="zyq-75-XLP"/>
                         <outlet property="mapView" destination="hG4-tQ-Fzs" id="3hs-2w-gsl"/>
+                        <outlet property="optionsStackView" destination="cda-fE-JYJ" id="vmF-JX-TsL"/>
                         <outlet property="undoFloatingButton" destination="Kjb-AO-gGR" id="clJ-0O-2o3"/>
                     </connections>
                 </viewController>
