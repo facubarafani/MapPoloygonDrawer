@@ -58,4 +58,8 @@ import GoogleMaps
         let c_lng = arr.count > 0 ? s2 / Double(arr.count) : 0.0
         return CLLocationCoordinate2D.init(latitude: c_lat, longitude: c_lng)
     }
+    
+    func undoLastPoint() {
+        self.points.removeLast()
+    }
 }

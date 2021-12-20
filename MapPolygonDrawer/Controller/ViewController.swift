@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         }
     }
     var currentPolygon = Polygon()
+    var currentMarkers = [GMSMarker]()
+    var currentGMapsPolygon = GMSPolygon()
     var mapPolygons = [GMSPolygon]() {
         didSet {
             mapPolygons.forEach { $0.map = self.mapView }
@@ -107,11 +109,35 @@ class ViewController: UIViewController {
         isCreatingPolygon = !isCreatingPolygon
     }
     
+    @IBAction func cancelFloatingButtonPressed(_ sender: Any) {
+        currentMarkers.removeAll()
+        currentPolygon = Polygon()
+        clearMap()
+        isCreatingPolygon = !isCreatingPolygon
+    }
+    
+    
+    @IBAction func undoFloatingButtonPressed(_ sender: Any) {
+        // If there is at least a marker on the map
+        if let lastMarker = currentMarkers.last {
+            // remove last point stored in Polygon structure
+            currentPolygon.undoLastPoint()
+            // remove its marker from the mapview
+            lastMarker.map = nil
+            currentMarkers.removeLast()
+            // redraw polygon based on current point
+            currentGMapsPolygon.map = nil
+            drawPolygonBasedOnCurrentPoints()
+        }
+    }
+    
     private func savePolygonAndEmptyCurrentPolygon() {
         if !currentPolygon.points.isEmpty {
             PolygonRepository.shared.store(polygon: currentPolygon)
                 .done {
+                    self.currentGMapsPolygon = GMSPolygon()
                     self.currentPolygon = Polygon()
+                    self.currentMarkers.removeAll()
                     self.fetchLocallyStoredPolygons()
                     self.clearMap()
                     self.view.makeToast("Polygon saved successfully.")
@@ -147,6 +173,12 @@ class ViewController: UIViewController {
                 }
             })
     }
+    
+    func drawPolygonBasedOnCurrentPoints() {
+        let polygon = currentPolygon.getGMSPolygon()
+        currentGMapsPolygon = polygon
+        polygon.map = mapView
+    }
 }
 
 extension ViewController: GMSMapViewDelegate {
@@ -162,10 +194,11 @@ extension ViewController: GMSMapViewDelegate {
         currentPolygon.points.append(point)
         clearMap()
         for p in currentPolygon.points {
-            p.toMarker().map = mapView
+            let m = p.toMarker()
+            m.map = mapView
+            currentMarkers.append(m)
         }
-        let polygon = currentPolygon.getGMSPolygon()
-        polygon.map = mapView
+        drawPolygonBasedOnCurrentPoints()
     }
 }
 
