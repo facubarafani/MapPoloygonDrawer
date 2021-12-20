@@ -21,31 +21,91 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-Wu-lvH" customClass="MDCFloatingButton">
-                                <rect key="frame" x="352" y="800" width="30" height="30"/>
+                                <rect key="frame" x="322" y="770" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3L0-Wu-lvH" secondAttribute="height" id="VH8-3z-UaY"/>
+                                    <constraint firstAttribute="height" constant="60" id="rZr-q0-DSr"/>
+                                </constraints>
                                 <connections>
                                     <action selector="addFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Zz-nu-3me"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cda-fE-JYJ">
+                                <rect key="frame" x="322" y="662" width="60" height="88"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-aH-Km1">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-hv-K2M">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="391-TP-2cj" customClass="MDCFloatingButton">
+                                                <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="391-TP-2cj" secondAttribute="height" id="Lht-co-H4q"/>
+                                                    <constraint firstAttribute="width" constant="40" id="RED-qL-a8a"/>
+                                                </constraints>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-oP-Siz">
+                                                <rect key="frame" x="50" y="0.0" width="10" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3kZ-oP-Siz" firstAttribute="width" secondItem="ibd-hv-K2M" secondAttribute="width" id="tt3-uH-bRK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQC-V5-dnD">
+                                        <rect key="frame" x="0.0" y="48" width="60" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pb0-Q3-mMO">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjb-AO-gGR" customClass="MDCFloatingButton">
+                                                <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Kjb-AO-gGR" secondAttribute="height" id="5wq-gU-2YF"/>
+                                                    <constraint firstAttribute="width" constant="40" id="IWb-JB-gL2"/>
+                                                </constraints>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-TU-JrI">
+                                                <rect key="frame" x="50" y="0.0" width="10" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lf8-TU-JrI" firstAttribute="width" secondItem="pb0-Q3-mMO" secondAttribute="width" id="GGn-bm-R6d"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3L0-Wu-lvH" secondAttribute="bottom" constant="32" id="0AZ-8b-MrZ"/>
                             <constraint firstItem="hG4-tQ-Fzs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="53W-0a-Qxr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3L0-Wu-lvH" secondAttribute="trailing" constant="32" id="5DF-3o-MHH"/>
+                            <constraint firstItem="cda-fE-JYJ" firstAttribute="centerX" secondItem="3L0-Wu-lvH" secondAttribute="centerX" id="7gP-AN-aw0"/>
                             <constraint firstAttribute="trailing" secondItem="hG4-tQ-Fzs" secondAttribute="trailing" id="BZL-Ct-AoI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3L0-Wu-lvH" secondAttribute="bottom" constant="32" id="D6e-gw-xBh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cda-fE-JYJ" secondAttribute="trailing" constant="32" id="Es5-y3-LXH"/>
                             <constraint firstItem="hG4-tQ-Fzs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jg6-oo-YmS"/>
                             <constraint firstAttribute="bottom" secondItem="hG4-tQ-Fzs" secondAttribute="bottom" id="peZ-Pw-HWQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3L0-Wu-lvH" secondAttribute="trailing" constant="32" id="sCq-Hl-0vu"/>
+                            <constraint firstItem="3L0-Wu-lvH" firstAttribute="top" secondItem="cda-fE-JYJ" secondAttribute="bottom" constant="20" id="tFp-mI-4Xu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addFloatingButton" destination="3L0-Wu-lvH" id="JFF-n9-wdD"/>
+                        <outlet property="cancelFloatingButton" destination="391-TP-2cj" id="zyq-75-XLP"/>
                         <outlet property="mapView" destination="hG4-tQ-Fzs" id="3hs-2w-gsl"/>
+                        <outlet property="undoFloatingButton" destination="Kjb-AO-gGR" id="clJ-0O-2o3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="76"/>
+            <point key="canvasLocation" x="111.59420289855073" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>

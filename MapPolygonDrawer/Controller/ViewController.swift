@@ -14,6 +14,9 @@ import PromiseKit
 class ViewController: UIViewController {
     @IBOutlet weak var addFloatingButton: MDCFloatingButton!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var undoFloatingButton: MDCFloatingButton!
+    @IBOutlet weak var cancelFloatingButton: MDCFloatingButton!
+    
     var isCreatingPolygon: Bool = false
     var currentPolygon = Polygon()
     var mapPolygons = [GMSPolygon]() {
@@ -38,9 +41,20 @@ class ViewController: UIViewController {
     @objc func setText() {}
     
     @objc func setUI() {
+        // Add Floating Button
         addFloatingButton.setImage(R.image.images.add(), for: .normal)
         addFloatingButton.setImageTintColor(.white, for: .normal)
         addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
+        
+        // Cancel Floating Button
+        cancelFloatingButton.setImage(R.image.images.close(), for: .normal)
+        cancelFloatingButton.setImageTintColor(.white, for: .normal)
+        cancelFloatingButton.setBackgroundColor(R.color.colors.secondary(), for: .normal)
+        
+        // Undo Floating Button
+        undoFloatingButton.setImage(R.image.images.undo(), for: .normal)
+        undoFloatingButton.setImageTintColor(.white, for: .normal)
+        undoFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
     }
     
     private func setMapView() {
