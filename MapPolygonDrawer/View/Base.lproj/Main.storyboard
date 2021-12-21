@@ -47,7 +47,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="RED-qL-a8a"/>
                                                 </constraints>
                                                 <connections>
-                                                    <action selector="cancelFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7o-Vk-hXk"/>
+                                                    <action selector="confirmFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMu-hw-6N9"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-oP-Siz">
@@ -104,7 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="addFloatingButton" destination="3L0-Wu-lvH" id="JFF-n9-wdD"/>
-                        <outlet property="cancelFloatingButton" destination="391-TP-2cj" id="zyq-75-XLP"/>
+                        <outlet property="confirmFloatingButton" destination="391-TP-2cj" id="X9W-cr-P4g"/>
                         <outlet property="mapView" destination="hG4-tQ-Fzs" id="3hs-2w-gsl"/>
                         <outlet property="optionsStackView" destination="cda-fE-JYJ" id="vmF-JX-TsL"/>
                         <outlet property="undoFloatingButton" destination="Kjb-AO-gGR" id="clJ-0O-2o3"/>

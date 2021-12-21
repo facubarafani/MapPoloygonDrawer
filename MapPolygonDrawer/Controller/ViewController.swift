@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var addFloatingButton: MDCFloatingButton!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var undoFloatingButton: MDCFloatingButton!
-    @IBOutlet weak var cancelFloatingButton: MDCFloatingButton!
+    @IBOutlet weak var confirmFloatingButton: MDCFloatingButton!
     @IBOutlet weak var optionsStackView: UIStackView!
     
     var isCreatingPolygon: Bool = false {
@@ -56,10 +56,10 @@ class ViewController: UIViewController {
         addFloatingButton.setImageTintColor(.white, for: .normal)
         addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
         
-        // Cancel Floating Button
-        cancelFloatingButton.setImage(R.image.images.done(), for: .normal)
-        cancelFloatingButton.setImageTintColor(.white, for: .normal)
-        cancelFloatingButton.setBackgroundColor(R.color.colors.green(), for: .normal)
+        // Confirm Floating Button
+        confirmFloatingButton.setImage(R.image.images.done(), for: .normal)
+        confirmFloatingButton.setImageTintColor(.white, for: .normal)
+        confirmFloatingButton.setBackgroundColor(R.color.colors.green(), for: .normal)
         
         // Undo Floating Button
         undoFloatingButton.setImage(R.image.images.undo(), for: .normal)
@@ -103,33 +103,41 @@ class ViewController: UIViewController {
             addFloatingButton.setImage(R.image.images.close(), for: .normal)
         } else {
             // sets add icon when isCreatingPolygon is turning into false
+            currentMarkers.removeAll()
+            currentPolygon = Polygon()
+            clearMap()
             addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
             addFloatingButton.setImage(R.image.images.add(), for: .normal)
-            savePolygonAndEmptyCurrentPolygon()
         }
         // Changes variable value to inverse
         isCreatingPolygon = !isCreatingPolygon
     }
     
-    @IBAction func cancelFloatingButtonPressed(_ sender: Any) {
-        currentMarkers.removeAll()
-        currentPolygon = Polygon()
-        clearMap()
+    @IBAction func confirmFloatingButtonPressed(_ sender: Any) {
+        savePolygonAndEmptyCurrentPolygon()
+        addFloatingButton.setBackgroundColor(R.color.colors.primary(), for: .normal)
+        addFloatingButton.setImage(R.image.images.add(), for: .normal)
+        addFloatingButton.setImageTintColor(.white, for: .normal)
+        // Changes variable value to inverse
         isCreatingPolygon = !isCreatingPolygon
     }
     
     
     @IBAction func undoFloatingButtonPressed(_ sender: Any) {
         // If there is at least a marker on the map
-        if let lastMarker = currentMarkers.last {
-            // remove last point stored in Polygon structure
-            currentPolygon.undoLastPoint()
-            // remove its marker from the mapview
-            lastMarker.map = nil
-            currentMarkers.removeLast()
-            // redraw polygon based on current point
-            currentGMapsPolygon.map = nil
-            drawPolygonBasedOnCurrentPoints()
+        if !currentPolygon.points.isEmpty {
+            if let lastMarker = currentMarkers.last {
+                // remove last point stored in Polygon structure
+                currentPolygon.undoLastPoint()
+                // remove its marker from the mapview
+                lastMarker.map = nil
+                currentMarkers.removeLast()
+                // redraw polygon based on current point
+                currentGMapsPolygon.map = nil
+                drawPolygonBasedOnCurrentPoints()
+            }
+        } else {
+            self.view.makeToast("No points left to undo.")
         }
     }
     
@@ -145,8 +153,10 @@ class ViewController: UIViewController {
                     self.view.makeToast("Polygon saved successfully.")
                 }
                 .catch { error in
-                    self.view.makeToast("Error occurred when attempting to save polygon/")
+                    self.view.makeToast("Error occurred when attempting to save polygon")
                 }
+        } else {
+            self.view.makeToast("You can't save an empty polygon. Try again.")
         }
     }
     
