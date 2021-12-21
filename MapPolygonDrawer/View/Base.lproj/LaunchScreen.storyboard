@@ -22,12 +22,20 @@
                                     <constraint firstAttribute="height" constant="300" id="sT9-lN-g1E"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MapPolygonDrawer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv3-Bv-ut4">
+                                <rect key="frame" x="97" y="606" width="220" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.74117647058823533" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TQu-gm-AKj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="S5L-8r-c3Z"/>
                             <constraint firstItem="TQu-gm-AKj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xxv-dF-t3F"/>
+                            <constraint firstItem="iv3-Bv-ut4" firstAttribute="top" secondItem="TQu-gm-AKj" secondAttribute="bottom" constant="8" id="ggl-Ia-7Bj"/>
+                            <constraint firstItem="iv3-Bv-ut4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rNO-Bx-ZLj"/>
                         </constraints>
                     </view>
                 </viewController>

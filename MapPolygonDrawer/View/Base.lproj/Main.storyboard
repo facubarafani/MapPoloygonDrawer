@@ -33,31 +33,36 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cda-fE-JYJ">
                                 <rect key="frame" x="322" y="662" width="60" height="88"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-aH-Km1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-O8-KEt">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-hv-K2M">
-                                                <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="391-TP-2cj" customClass="MDCFloatingButton">
-                                                <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-aH-Km1">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-hv-K2M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="391-TP-2cj" customClass="MDCFloatingButton">
+                                                        <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="391-TP-2cj" secondAttribute="height" id="Lht-co-H4q"/>
+                                                            <constraint firstAttribute="width" constant="40" id="RED-qL-a8a"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="confirmFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMu-hw-6N9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-oP-Siz">
+                                                        <rect key="frame" x="50" y="0.0" width="10" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="391-TP-2cj" secondAttribute="height" id="Lht-co-H4q"/>
-                                                    <constraint firstAttribute="width" constant="40" id="RED-qL-a8a"/>
+                                                    <constraint firstItem="3kZ-oP-Siz" firstAttribute="width" secondItem="ibd-hv-K2M" secondAttribute="width" id="tt3-uH-bRK"/>
                                                 </constraints>
-                                                <connections>
-                                                    <action selector="confirmFloatingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMu-hw-6N9"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-oP-Siz">
-                                                <rect key="frame" x="50" y="0.0" width="10" height="40"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="3kZ-oP-Siz" firstAttribute="width" secondItem="ibd-hv-K2M" secondAttribute="width" id="tt3-uH-bRK"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQC-V5-dnD">
                                         <rect key="frame" x="0.0" y="48" width="60" height="40"/>
